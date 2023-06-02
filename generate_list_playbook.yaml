@@ -10,7 +10,7 @@
 
     - name: Construct YAML data and write to file
       ansible.builtin.template:
-        src: ./facts.brief.j2
+        src: facts.brief.j2
         dest: '{{ playbook_dir }}/hw_sw_list_directory/{{ inventory_hostname }}.yml'
         force: false
         mode: '644'
