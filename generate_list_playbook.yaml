@@ -1,0 +1,16 @@
+- name: IOS Facts Playbook 2
+  hosts: all
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+    - name: Gather device information
+      cisco.ios.ios_facts:
+        gather_subset: hardware
+
+    - name: Construct YAML data and write to file
+      ansible.builtin.template:
+        src: ./facts.brief.j2
+        dest: '{{ playbook_dir }}/hw_sw_list_directory/{{ inventory_hostname }}.yml'
+        force: false
+        mode: '644'
