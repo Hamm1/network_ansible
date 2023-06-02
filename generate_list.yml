@@ -1,16 +1,14 @@
----
 - name: IOS Facts Playbook
   hosts: [[hosts or children in host file]]
   gather_facts: false
   connection: network_cli
 
   tasks:
-
-  - name: Gather device information
-    ios_facts:
-       gather_subset: hardware
+    - name: Gather device information
+      ios_facts:
+        gather_subset: hardware
     
-  - name: Construct YAML data and write to file
-    ansible.builtin.template
-          src: [path to]/facts.brief.j2
-          dest: '{{playbook_dir }}/hw_sw_list_directory/{{ inventory_hostname }}.yml"
+    - name: Construct YAML data and write to file
+      ansible.builtin.template:
+            src: [path to]/facts.brief.j2
+            dest: '{{playbook_dir }}/hw_sw_list_directory/{{ inventory_hostname }}.yml'
