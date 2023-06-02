@@ -1,0 +1,3 @@
+https://github.com/mohitmksgit/ansible_cisco_info
+!
+https://docs.ansible.com/ansible/2.9/modules/ios_facts_module.html#examples
