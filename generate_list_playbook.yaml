@@ -1,5 +1,5 @@
 - name: IOS Facts Playbook 2
-  hosts: all
+  hosts: cisco_9k
   gather_facts: false
   connection: network_cli
 
