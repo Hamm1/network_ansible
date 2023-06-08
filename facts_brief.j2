@@ -3,8 +3,7 @@ Data:
 
   - name: {{ ansible_net_hostname  }}
     serial: {{ ansible_net_serialnum }}
-{%- filter indent(width=2) %}
-{% if ansible_net_model is defined %}
+{%- if ansible_net_model is defined %}
     {% if ansible_net_model %}
         model: {{ ansible_net_model }}
     {% else %}
@@ -12,10 +11,9 @@ Data:
     {% endif %}
 {% else %}
     model: Not Found
-{% endif %}
+{%- endif %}
     version: {{ ansible_net_version }}
-{%- filter indent(width=2) %}
-{% if ansible_net_stacked_models is defined %}
+{%- if ansible_net_stacked_models is defined %}
     {% if ansible_net_stacked_models %}
         members: {{ ansible_net_stacked_models }}
     {% else %}
@@ -23,9 +21,8 @@ Data:
     {% endif %}
 {% else %}
     members: Not Found
-{% endif %}
-{%- filter indent(width=2) %}
-{% if ansible_net_stacked_serialnums is defined %}
+{%- endif %}
+{%- if ansible_net_stacked_serialnums is defined %}
     {% if ansible_net_stacked_serialnums %}
         membernums: {{ ansible_net_stacked_serialnums }}
     {% else %}
@@ -33,6 +30,6 @@ Data:
     {% endif %}
 {% else %}
     membernums: Not Found
-{% endif %}
+{%- endif %}
 
 ...
