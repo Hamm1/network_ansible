@@ -6,10 +6,18 @@ Data:
     {% if ansible_net_model %}
     model: {{ ansible_net_model }}
     {% else %}
-    model: "Not Found"
+    model: Not Found
     {% endif %}
     version: {{ ansible_net_version }}
-    {#members: {{ ansible_net_stacked_models }} #}
-    {#membernums: {{ ansible_net_stacked_serialnums }} #}
+    {% if ansible_net_stacked_models %}
+    members: {{ ansible_net_stacked_models }}
+    {% else %}
+    members: Not Found
+    {% endif %}
+    {% if ansible_net_stacked_serialnums %}
+    membernums: {{ ansible_net_stacked_serialnums }}
+    {% else %}
+    membernums: Not Found
+    {% endif %}
 
 ...
