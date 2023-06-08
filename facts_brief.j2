@@ -3,9 +3,9 @@ Data:
 
   - name: {{ ansible_net_hostname  }}
     serial: {{ ansible_net_serialnum }}
-    {% if ansible_net_model -%}
+    {% if ansible_net_model %}
         model: {{ ansible_net_model }}
-    {% else -%}
+    {% else %}
         model: "Not Found"
     {% endif %}
     version: {{ ansible_net_version }}
