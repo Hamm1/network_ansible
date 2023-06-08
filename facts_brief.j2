@@ -13,13 +13,21 @@ Data:
     model: Not Found
 {% endif %}
     version: {{ ansible_net_version }}
+{% if ansible_net_stacked_models is defined %}
 {% if ansible_net_stacked_models %}
     members: {{ ansible_net_stacked_models }}
 {% else %}
     members: Not Found
 {% endif %}
+{% else %}
+    members: Not Found
+{% endif %}
+{% if ansible_net_stacked_serialnums is defined %}
 {% if ansible_net_stacked_serialnums %}
     membernums: {{ ansible_net_stacked_serialnums }}
+{% else %}
+    membernums: Not Found
+{% endif %}
 {% else %}
     membernums: Not Found
 {% endif %}
