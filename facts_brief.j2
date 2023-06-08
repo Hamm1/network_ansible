@@ -3,10 +3,12 @@ Data:
 
   - name: {{ ansible_net_hostname  }}
     serial: {{ ansible_net_serialnum }}
+{% if ansible_net_model is defined %}
 {% if ansible_net_model %}
     model: {{ ansible_net_model }}
 {% else %}
     model: Not Found
+{% endif %}
 {% endif %}
     version: {{ ansible_net_version }}
 {% if ansible_net_stacked_models %}

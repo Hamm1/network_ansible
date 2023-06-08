@@ -1,7 +1,6 @@
 - name: IOS Facts Playbook 2
   hosts: cisco_asa
   vars:
-    ansible_net_model: ""
     ansible_net_stacked_models: ""
     ansible_net_stacked_serialnums: ""
   gather_facts: false
