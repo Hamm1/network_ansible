@@ -22,7 +22,7 @@ Data:
 {% else %}
     members: Not Found
 {% endif -%}
-{% if ansible_net_stacked_serialnums is defined %}
+{% if ansible_net_stacked_serialnums is defined -%}
     {% if ansible_net_stacked_serialnums -%}
         membernums: {{ ansible_net_stacked_serialnums }}
     {% else -%}
