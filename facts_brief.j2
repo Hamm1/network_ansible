@@ -3,21 +3,21 @@ Data:
 
   - name: {{ ansible_net_hostname  }}
     serial: {{ ansible_net_serialnum }}
-    {%- if ansible_net_model %}
+{% if ansible_net_model %}
     model: {{ ansible_net_model }}
-    {%- else %}
+{% else %}
     model: Not Found
-    {% endif %}
+{% endif %}
     version: {{ ansible_net_version }}
-    {%- if ansible_net_stacked_models %}
+{% if ansible_net_stacked_models %}
     members: {{ ansible_net_stacked_models }}
-    {%- else %}
+{% else %}
     members: Not Found
-    {% endif %}
-    {%- if ansible_net_stacked_serialnums %}
+{% endif %}
+{% if ansible_net_stacked_serialnums %}
     membernums: {{ ansible_net_stacked_serialnums }}
-    {%- else %}
+{% else %}
     membernums: Not Found
-    {% endif %}
+{% endif %}
 
 ...
