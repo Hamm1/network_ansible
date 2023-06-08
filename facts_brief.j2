@@ -11,7 +11,7 @@ Data:
     {% endif -%}
 {% else %}
     model: Not Found
-{% endif %}
+{% endif -%}
     version: {{ ansible_net_version }}
 {% if ansible_net_stacked_models is defined %}
     {% if ansible_net_stacked_models -%}
@@ -21,7 +21,7 @@ Data:
     {% endif -%}
 {% else %}
     members: Not Found
-{% endif %}
+{% endif -%}
 {% if ansible_net_stacked_serialnums is defined %}
     {% if ansible_net_stacked_serialnums -%}
         membernums: {{ ansible_net_stacked_serialnums }}
@@ -30,6 +30,6 @@ Data:
     {% endif -%}
 {% else %}
     membernums: Not Found
-{% endif %}
+{% endif -%}
 
 ...
