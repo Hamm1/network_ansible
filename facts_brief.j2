@@ -8,7 +8,7 @@ Data:
         model: {{ ansible_net_model }}
     {% else %}
         model: Not Found
-    {% endif %}
+    {%- endif %}
 {% else %}
     model: Not Found
 {% endif %}
