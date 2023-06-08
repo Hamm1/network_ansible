@@ -18,4 +18,3 @@
         dest: '{{ playbook_dir }}/hw_sw_list_directory/{{ inventory_hostname }}.yml'
         force: true
         mode: '644'
-      ignore_errors: true
