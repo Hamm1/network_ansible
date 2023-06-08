@@ -1,5 +1,7 @@
 - name: IOS Facts Playbook 2
   hosts: cisco_asa
+  vars:
+    ansible_net_model: ""
   gather_facts: false
   connection: network_cli
 
