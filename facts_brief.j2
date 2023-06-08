@@ -6,7 +6,7 @@ Data:
 {% if ansible_net_model is defined %}
     {%- if ansible_net_model %}
         model: {{ ansible_net_model }}
-    {%- else %}
+    {% else %}
         model: Not Found
     {%- endif %}
 {% else %}
@@ -16,7 +16,7 @@ Data:
 {% if ansible_net_stacked_models is defined %}
     {%- if ansible_net_stacked_models %}
         members: {{ ansible_net_stacked_models }}
-    {%- else %}
+    {% else %}
         members: Not Found
     {%- endif %}
 {% else %}
@@ -25,7 +25,7 @@ Data:
 {% if ansible_net_stacked_serialnums is defined %}
     {%- if ansible_net_stacked_serialnums %}
         membernums: {{ ansible_net_stacked_serialnums }}
-    {%- else %}
+    {% else %}
         membernums: Not Found
     {%- endif %}
 {% else %}
