@@ -9,6 +9,9 @@ Data:
 {% else %}
     model: Not Found
 {% endif %}
+{% else %}
+    model: Not Found
+{% endif %}
 {% endif %}
     version: {{ ansible_net_version }}
 {% if ansible_net_stacked_models %}
